@@ -1,5 +1,4 @@
 'use client'
-
 import { Progress } from '@/components/ui/progress'
 import { useToast } from '@/components/ui/use-toast'
 import { useUploadThing } from '@/lib/uploadthing'

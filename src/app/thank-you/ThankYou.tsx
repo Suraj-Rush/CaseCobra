@@ -10,6 +10,7 @@ import { formatPrice } from '@/lib/utils'
 const ThankYou = () => {
   const searchParams = useSearchParams()
   const orderId = searchParams.get('orderId') || ''
+  console.log(orderId)
 
   const { data } = useQuery({
     queryKey: ['get-payment-status'],
@@ -17,6 +18,7 @@ const ThankYou = () => {
     retry: true,
     retryDelay: 500,
   })
+
 
   if (data === undefined) {
     return (
@@ -147,3 +149,4 @@ const ThankYou = () => {
 }
 
 export default ThankYou
+
